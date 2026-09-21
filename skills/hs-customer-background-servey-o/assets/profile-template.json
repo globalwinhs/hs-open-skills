@@ -1,0 +1,19 @@
+{
+  "seller_product": {
+    "name": "",
+    "applications": [],
+    "ideal_customer_roles": [],
+    "minimum_order_characteristics": []
+  },
+  "risk_policy": {
+    "preferred_payment_terms": [],
+    "unacceptable_payment_terms": [],
+    "high_risk_signals": [],
+    "mandatory_verification_items": []
+  },
+  "market_focus": {
+    "priority_countries": [],
+    "restricted_countries": []
+  }
+}
+

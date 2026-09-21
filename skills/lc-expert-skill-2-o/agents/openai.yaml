@@ -1,0 +1,7 @@
+interface:
+  display_name: "开源信用证审核"
+  short_description: "审核信用证草稿和交单文件，支持本机企业配置"
+  default_prompt: "使用 $lc-expert-skill-2-o 审核这份信用证或交单文件；首次使用时先引导我建立企业审证配置。"
+policy:
+  allow_implicit_invocation: true
+

@@ -1,0 +1,7 @@
+interface:
+  display_name: "开源单一客户背调"
+  short_description: "核实询盘客户主体、业务匹配和交易风险"
+  default_prompt: "使用 $hs-customer-background-servey-o 调查这个询盘客户；首次使用时先引导我建立交易风险画像。"
+policy:
+  allow_implicit_invocation: true
+

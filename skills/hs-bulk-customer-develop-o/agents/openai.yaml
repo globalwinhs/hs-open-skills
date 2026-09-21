@@ -1,0 +1,7 @@
+interface:
+  display_name: "开源批量客户开发"
+  short_description: "按产品和市场建立可核验的目标客户名单"
+  default_prompt: "使用 $hs-bulk-customer-develop-o 为我的产品开发目标客户；首次使用时先引导我建立开发画像。"
+policy:
+  allow_implicit_invocation: true
+

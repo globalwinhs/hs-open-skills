@@ -1,0 +1,23 @@
+{
+  "product": {
+    "name": "",
+    "applications": [],
+    "strengths": [],
+    "constraints": [],
+    "certifications": []
+  },
+  "ideal_customer": {
+    "types": [],
+    "industries": [],
+    "channels": [],
+    "company_size": "",
+    "order_characteristics": []
+  },
+  "campaign_defaults": {
+    "markets": [],
+    "exclusions": [],
+    "desired_contact_types": [],
+    "default_batch_size": null
+  }
+}
+

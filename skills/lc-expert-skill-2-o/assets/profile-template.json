@@ -1,0 +1,43 @@
+{
+  "company": {
+    "beneficiary_name": "",
+    "beneficiary_address": "",
+    "products": [],
+    "usual_currencies": []
+  },
+  "banking": {
+    "advising_banks": [],
+    "nominated_banks": [],
+    "confirmation_policy": "",
+    "discounting_policy": ""
+  },
+  "commercial_policy": {
+    "accepted_credit_types": [],
+    "maximum_tenor_days": null,
+    "quantity_tolerance_percent": null,
+    "amount_tolerance_percent": null,
+    "minimum_production_days": null,
+    "minimum_document_preparation_days": null
+  },
+  "shipping": {
+    "usual_loading_ports": [],
+    "accepted_incoterms": [],
+    "partial_shipments_policy": "",
+    "transshipment_policy": ""
+  },
+  "documents": {
+    "normally_available": [],
+    "unavailable_or_restricted": [],
+    "third_party_issuers": []
+  },
+  "risk_policy": {
+    "restricted_jurisdictions": [],
+    "restricted_banks": [],
+    "mandatory_manual_review_triggers": []
+  },
+  "delivery": {
+    "preferred_report_format": "markdown",
+    "preferred_output_location": "ask_each_time"
+  }
+}
+

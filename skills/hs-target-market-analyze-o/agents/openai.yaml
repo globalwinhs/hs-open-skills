@@ -1,0 +1,7 @@
+interface:
+  display_name: "开源目标市场分析"
+  short_description: "按产品证据筛选和排序出口目标市场"
+  default_prompt: "使用 $hs-target-market-analyze-o 为我的产品筛选目标市场；首次使用时先引导我建立产品档案。"
+policy:
+  allow_implicit_invocation: true
+

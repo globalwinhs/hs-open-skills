@@ -1,0 +1,42 @@
+{
+  "campaign": {
+    "product": "示例产品",
+    "market": "示例市场",
+    "customer_type": "进口商",
+    "exclusions": ["制造同类产品的竞争对手"]
+  },
+  "analysis_date": "2026-08-30",
+  "leads": [
+    {
+      "company_name": "示例客户",
+      "country": "示例国家",
+      "website": "https://example.com",
+      "customer_role": "进口商",
+      "match_reason": "主营目标产品所在品类，并覆盖目标渠道",
+      "scores": {
+        "product_match": 4,
+        "purchase_signal": 3,
+        "reachability": 4,
+        "risk": 1
+      },
+      "contacts": [
+        {
+          "name": "公开联系人",
+          "role": "采购",
+          "email": "public@example.com",
+          "phone": "",
+          "source_url": "https://example.com/contact"
+        }
+      ],
+      "sources": [
+        {
+          "title": "公司官网",
+          "url": "https://example.com/about",
+          "supports": "公司身份与业务类型"
+        }
+      ],
+      "unknowns": ["采购频率待确认"],
+      "outreach_angle": "从其现有渠道需要的产品特性切入"
+    }
+  ]
+}
