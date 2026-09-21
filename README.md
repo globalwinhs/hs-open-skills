@@ -8,16 +8,16 @@
 
 | Skill | 用途 | 主要输出 |
 |---|---|---|
-| [`lc-expert-skill-2-o`](skills/lc-expert-skill-2-o/) | 审核信用证草稿及信用证项下交单文件 | 风险、不符点、改证或改单建议 |
-| [`hs-target-market-analyze-o`](skills/hs-target-market-analyze-o/) | 比较出口产品适合优先进入的国家或地区 | 市场排序、证据、障碍和验证动作 |
-| [`hs-bulk-customer-develop-o`](skills/hs-bulk-customer-develop-o/) | 批量寻找、核实、去重并排序 B2B 潜在客户 | 客户名单、公开联系方式、匹配理由 |
-| [`hs-customer-background-servey-o`](skills/hs-customer-background-servey-o/) | 对单一询盘客户或指定公司做背景调查 | 主体、业务、采购信号、联系人和风险 |
+| [`lc-expert-skill-2-o`](https://github.com/globalwinhs/hs-open-skills/tree/main/skills/lc-expert-skill-2-o) | 审核信用证草稿及信用证项下交单文件 | 风险、不符点、改证或改单建议 |
+| [`hs-target-market-analyze-o`](https://github.com/globalwinhs/hs-open-skills/tree/main/skills/hs-target-market-analyze-o) | 比较出口产品适合优先进入的国家或地区 | 市场排序、证据、障碍和验证动作 |
+| [`hs-bulk-customer-develop-o`](https://github.com/globalwinhs/hs-open-skills/tree/main/skills/hs-bulk-customer-develop-o) | 批量寻找、核实、去重并排序 B2B 潜在客户 | 客户名单、公开联系方式、匹配理由 |
+| [`hs-customer-background-servey-o`](https://github.com/globalwinhs/hs-open-skills/tree/main/skills/hs-customer-background-servey-o) | 对单一询盘客户或指定公司做背景调查 | 主体、业务、采购信号、联系人和风险 |
 
 > `servey` 沿用原 Skill 名称，避免安装后出现名称不一致；它表示 customer background survey。
 
 ## 最快安装
 
-- **豆包工作 / WorkBuddy**：从 [`packages/`](packages/) 下载对应 ZIP，在客户端的技能页面选择“上传技能”。
+- **豆包工作 / WorkBuddy**：从 [`packages/`](https://github.com/globalwinhs/hs-open-skills/tree/main/packages) 下载对应 ZIP，在客户端的技能页面选择“上传技能”。
 - **Claude Code**：把所需 Skill 文件夹复制到 `~/.claude/skills/`，或复制到项目内的 `.claude/skills/`。
 - **ChatGPT**：使用“项目”或“自定义 GPT”加载 `SKILL.md` 与参考资料。ChatGPT 网页版不是按本地 `SKILL.md` 目录原生安装，完整步骤见安装说明。
 
@@ -64,4 +64,3 @@
 - [WorkBuddy 技能官方文档](https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Skills-Market)
 - [ChatGPT Projects 官方帮助](https://help.openai.com/en/articles/10169521-projects-in-chatgpt)
 - [创建和编辑 GPTs 官方帮助](https://help.openai.com/en/articles/8554397-creating-and-editing-gpts)
-

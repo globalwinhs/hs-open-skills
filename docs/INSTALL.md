@@ -6,7 +6,7 @@
 
 适用于“豆包工作”桌面客户端，不是普通豆包对话页。
 
-1. 打开本仓库的 [`packages/`](../packages/) 目录，下载所需的 ZIP 文件。
+1. 打开本仓库的 [`packages/`](https://github.com/globalwinhs/hs-open-skills/tree/main/packages) 目录，下载所需的 ZIP 文件。
 2. 在豆包工作左侧进入“插件 · 技能 · 伙伴”。
 3. 切换到“技能”，点击“添加” → “上传技能”。
 4. 选择刚下载的 ZIP，按界面提示完成导入。
@@ -22,7 +22,7 @@
 
 ## 2. WorkBuddy
 
-1. 从 [`packages/`](../packages/) 下载所需的 ZIP 文件。
+1. 从 [`packages/`](https://github.com/globalwinhs/hs-open-skills/tree/main/packages) 下载所需的 ZIP 文件。
 2. 打开 WorkBuddy 的“技能”页面，点击“添加技能”。
 3. 选择“上传技能”，导入 ZIP。
 4. 在“已安装”中确认 Skill 已启用。
@@ -130,4 +130,3 @@ python3 scripts/profile_store.py save --input /path/to/profile.json --confirm
 3. `hs-customer-background-servey-o`：对重点客户或真实询盘做深入核实。
 
 信用证审核 `lc-expert-skill-2-o` 是独立的成交与交付风控流程。
-
