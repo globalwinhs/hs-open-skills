@@ -1,66 +1,108 @@
 # HS Open Skills
 
-一组面向外贸业务的开放 Agent Skills。当前包含信用证审核、目标市场分析、批量客户开发和单一客户背调。
+当前公开发布一个面向外贸业务的 Agent Skill：信用证审核。
 
-这 4 个 Skill 已移除特定企业、客户、银行、订单、港口、价格底线和本机路径等私有信息。首次使用时，可在用户确认后把可复用的企业或产品画像保存在用户自己的电脑上；不会把账号、密码、密钥、客户名单或交易文件写进画像。
+## 信用证审核 Skill
 
-## 包含的 Skills
+[`lc-expert-skill-2-o`](https://github.com/globalwinhs/hs-open-skills/tree/main/skills/lc-expert-skill-2-o) 用于审核信用证草稿及信用证项下交单文件，识别软条款、不符点、期限、运输、保险、银行、单据和合规风险，并给出可执行的改证或改单建议。
 
-| Skill | 用途 | 主要输出 |
-|---|---|---|
-| [`lc-expert-skill-2-o`](https://github.com/globalwinhs/hs-open-skills/tree/main/skills/lc-expert-skill-2-o) | 审核信用证草稿及信用证项下交单文件 | 风险、不符点、改证或改单建议 |
-| [`hs-target-market-analyze-o`](https://github.com/globalwinhs/hs-open-skills/tree/main/skills/hs-target-market-analyze-o) | 比较出口产品适合优先进入的国家或地区 | 市场排序、证据、障碍和验证动作 |
-| [`hs-bulk-customer-develop-o`](https://github.com/globalwinhs/hs-open-skills/tree/main/skills/hs-bulk-customer-develop-o) | 批量寻找、核实、去重并排序 B2B 潜在客户 | 客户名单、公开联系方式、匹配理由 |
-| [`hs-customer-background-servey-o`](https://github.com/globalwinhs/hs-open-skills/tree/main/skills/hs-customer-background-servey-o) | 对单一询盘客户或指定公司做背景调查 | 主体、业务、采购信号、联系人和风险 |
+公开版已移除特定企业、客户、银行、订单、港口、本机路径和内部政策等私有信息。首次使用时，可在用户确认后把可复用的企业审证偏好保存在用户自己的电脑上；不会把信用证号码、客户资料、交易文件、账号、密码或密钥写入画像。
 
-> `servey` 沿用原 Skill 名称，避免安装后出现名称不一致；它表示 customer background survey。
+## 方法一：使用 npx 安装
 
-## 最快安装
+适用于支持 [`skills` CLI](https://github.com/vercel-labs/skills) 的本地 Agent，例如 Claude Code 和 Codex。需要先安装 Node.js。
 
-- **豆包工作 / WorkBuddy**：从 [`packages/`](https://github.com/globalwinhs/hs-open-skills/tree/main/packages) 下载对应 ZIP，在客户端的技能页面选择“上传技能”。
-- **Claude Code**：把所需 Skill 文件夹复制到 `~/.claude/skills/`，或复制到项目内的 `.claude/skills/`。
-- **ChatGPT**：使用“项目”或“自定义 GPT”加载 `SKILL.md` 与参考资料。ChatGPT 网页版不是按本地 `SKILL.md` 目录原生安装，完整步骤见安装说明。
+交互式安装：
 
-详细步骤：[跨平台安装与使用指引](docs/INSTALL.md)
+```bash
+npx skills add globalwinhs/hs-open-skills --skill lc-expert-skill-2-o
+```
+
+安装到当前用户、供所有项目使用：
+
+```bash
+npx skills add globalwinhs/hs-open-skills --skill lc-expert-skill-2-o --global
+```
+
+指定安装到 Claude Code：
+
+```bash
+npx skills add globalwinhs/hs-open-skills --skill lc-expert-skill-2-o --agent claude-code --global --yes
+```
+
+指定安装到 Codex：
+
+```bash
+npx skills add globalwinhs/hs-open-skills --skill lc-expert-skill-2-o --agent codex --global --yes
+```
+
+`skills` CLI 默认会收集匿名安装遥测。如需关闭，可在命令前设置 `DISABLE_TELEMETRY=1`。安装前请先阅读 Skill 的 `SKILL.md` 和 `scripts/`。
+
+## 方法二：使用 git clone 安装
+
+```bash
+git clone https://github.com/globalwinhs/hs-open-skills.git
+cd hs-open-skills
+```
+
+Claude Code 全局安装：
+
+```bash
+mkdir -p ~/.claude/skills
+cp -R skills/lc-expert-skill-2-o ~/.claude/skills/
+```
+
+Codex 全局安装：
+
+```bash
+mkdir -p ~/.codex/skills
+cp -R skills/lc-expert-skill-2-o ~/.codex/skills/
+```
+
+详细步骤及豆包工作、WorkBuddy、ChatGPT 的使用方式见：[跨平台安装与使用指引](docs/INSTALL.md)。
+
+## ZIP 安装包
+
+豆包工作和 WorkBuddy 可下载 [`lc-expert-skill-2-o.zip`](https://github.com/globalwinhs/hs-open-skills/raw/refs/heads/main/packages/lc-expert-skill-2-o.zip)，再从客户端的技能页面上传。
 
 ## 首次使用
 
-安装后直接描述任务即可。建议第一次这样说：
+安装后可以这样开始：
 
 ```text
-我要使用这个 Skill。请先读取 SKILL.md 和 profile-schema.md，检查我是否需要建立本机/项目画像。
-先列出需要我补充的最少资料和拟保存内容；未经我确认，不要保存画像，也不要把客户资料、密码、密钥或交易文件写入长期配置。
+请使用信用证审核 Skill。先读取 SKILL.md 和相关审核框架，检查这是一份信用证草稿、交单文件还是专项复核。
+如果需要建立企业审证画像，先列出最少需要补充的资料和拟保存内容，等我确认后再保存。不得把客户资料、信用证号码、交易文件、密码或密钥写入长期配置。
 ```
 
-随后按 Skill 提示提供文件或资料。例如：
+随后上传信用证或交单文件，并说明审核目标。例如：
 
-- 信用证审核：“请审核这份信用证草稿，先列高风险条款，再给出可直接发送给客户的改证清单。”
-- 目标市场分析：“请比较德国、波兰、土耳其三个市场，判断我的工业阀门应优先进入哪里，并保留来源链接。”
-- 批量客户开发：“在已确定的德国市场内，寻找 30 家符合条件的工业阀门进口商，不要猜测邮箱。”
-- 单一客户背调：“请核实这家询盘公司的主体、主营业务、产品匹配、公开联系人和交易风险。”
+```text
+请审核这份信用证草稿，先列出高风险条款和无法核实项，再给出可直接发送给客户的改证清单。
+```
 
 ## 运行环境
 
-- 只有 Python 标准库依赖，建议 Python 3.9 或更高版本。
-- `scripts/profile_store.py` 用于验证并保存本机画像；保存动作必须带 `--confirm`。
-- 市场分析、批量客户开发、单一客户背调包含输入校验和报告生成脚本。
-- ChatGPT 等无法直接运行本地脚本的平台仍可按 `SKILL.md` 完成分析，但需要人工保存画像并核对输出格式。
+- Skill 脚本只依赖 Python 标准库，建议 Python 3.9 或更高版本。
+- `scripts/profile_store.py` 用于校验并保存本机企业审证画像；保存动作必须带 `--confirm`。
+- ChatGPT 等不能直接运行本地脚本的平台仍可按 `SKILL.md` 执行审核，但需人工保存画像并核对输出。
 
-## 安全与边界
+## 安全边界
 
-- 安装第三方 Skill 前，请先阅读 `SKILL.md` 和 `scripts/`。
+- 安装第三方 Skill 前，请先阅读 `SKILL.md`、`references/` 和 `scripts/`。
 - 不要把账号、密码、API Key、私钥、私人联系方式或完整交易文件保存为长期画像。
-- 联系方式只能来自公开可核验来源，不猜测、不拼接。
-- 信用证、制裁、出口管制、公司状态等会变化；使用时应核查最新官方来源和日期。
-- Skill 提供业务辅助，不替代银行、律师、保险机构或监管部门的最终判断。
+- 制裁、出口管制、银行政策和公司状态会变化，使用时应核查最新官方来源与日期。
+- 本 Skill 提供业务风险辅助，不替代银行、律师、保险机构或监管部门的最终判断。
 
 ## 许可证
 
 本仓库按 [MIT License](LICENSE) 开放。第三方规则、网站数据、商标及用户提交资料仍归各自权利人所有。
 
-## 参考平台文档
+## 参考文档
 
+- [`skills` CLI 官方仓库](https://github.com/vercel-labs/skills)
+- [`skills` CLI 官方文档](https://www.skills.sh/docs/cli)
 - [Claude Code Skills 官方文档](https://code.claude.com/docs/en/skills)
 - [WorkBuddy 技能官方文档](https://www.workbuddy.cn/docs/workbuddy/From-Beginner-to-Expert-Guide/Function-Description/Skills-Market)
 - [ChatGPT Projects 官方帮助](https://help.openai.com/en/articles/10169521-projects-in-chatgpt)
 - [创建和编辑 GPTs 官方帮助](https://help.openai.com/en/articles/8554397-creating-and-editing-gpts)
+
