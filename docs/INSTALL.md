@@ -1,6 +1,6 @@
 # 信用证审核 Skill 安装与使用指引
 
-本公开仓库只发布 `lc-expert-skill-2-o`。安装前建议先查看 [`SKILL.md`](https://github.com/globalwinhs/hs-open-skills/blob/main/skills/lc-expert-skill-2-o/SKILL.md) 和 `scripts/`。
+本公开仓库只发布 `lc-expert-o`。安装前建议先查看 [`SKILL.md`](https://github.com/globalwinhs/hs-open-skills/blob/main/skills/lc-expert-o/SKILL.md) 和 `scripts/`。
 
 ## 1. npx 安装
 
@@ -11,7 +11,7 @@
 在希望使用 Skill 的项目目录中运行：
 
 ```bash
-npx skills add globalwinhs/hs-open-skills --skill lc-expert-skill-2-o
+npx skills add globalwinhs/hs-open-skills --skill lc-expert-o
 ```
 
 安装器会列出支持的 Agent 和安装位置，按提示选择即可。项目级安装是默认方式。
@@ -21,7 +21,7 @@ npx skills add globalwinhs/hs-open-skills --skill lc-expert-skill-2-o
 让 Skill 在当前用户的所有项目中可用：
 
 ```bash
-npx skills add globalwinhs/hs-open-skills --skill lc-expert-skill-2-o --global
+npx skills add globalwinhs/hs-open-skills --skill lc-expert-o --global
 ```
 
 ### 指定 Agent 并跳过交互
@@ -29,26 +29,26 @@ npx skills add globalwinhs/hs-open-skills --skill lc-expert-skill-2-o --global
 Claude Code：
 
 ```bash
-npx skills add globalwinhs/hs-open-skills --skill lc-expert-skill-2-o --agent claude-code --global --yes
+npx skills add globalwinhs/hs-open-skills --skill lc-expert-o --agent claude-code --global --yes
 ```
 
 Codex：
 
 ```bash
-npx skills add globalwinhs/hs-open-skills --skill lc-expert-skill-2-o --agent codex --global --yes
+npx skills add globalwinhs/hs-open-skills --skill lc-expert-o --agent codex --global --yes
 ```
 
 ### 检查与更新
 
 ```bash
 npx skills list
-npx skills update lc-expert-skill-2-o
+npx skills update lc-expert-o
 ```
 
 `skills` CLI 默认收集匿名安装遥测。若不希望参与，可运行：
 
 ```bash
-DISABLE_TELEMETRY=1 npx skills add globalwinhs/hs-open-skills --skill lc-expert-skill-2-o
+DISABLE_TELEMETRY=1 npx skills add globalwinhs/hs-open-skills --skill lc-expert-o
 ```
 
 ## 2. git clone 手动安装
@@ -66,20 +66,20 @@ cd hs-open-skills
 
 ```bash
 mkdir -p ~/.claude/skills
-cp -R skills/lc-expert-skill-2-o ~/.claude/skills/
+cp -R skills/lc-expert-o ~/.claude/skills/
 ```
 
 只安装到当前项目：
 
 ```bash
 mkdir -p .claude/skills
-cp -R skills/lc-expert-skill-2-o .claude/skills/
+cp -R skills/lc-expert-o .claude/skills/
 ```
 
 重新打开 Claude Code 后，可以直接描述任务让它自动匹配，或输入：
 
 ```text
-/lc-expert-skill-2-o
+/lc-expert-o
 ```
 
 ### Codex
@@ -88,19 +88,19 @@ cp -R skills/lc-expert-skill-2-o .claude/skills/
 
 ```bash
 mkdir -p ~/.codex/skills
-cp -R skills/lc-expert-skill-2-o ~/.codex/skills/
+cp -R skills/lc-expert-o ~/.codex/skills/
 ```
 
 只安装到当前项目：
 
 ```bash
 mkdir -p .codex/skills
-cp -R skills/lc-expert-skill-2-o .codex/skills/
+cp -R skills/lc-expert-o .codex/skills/
 ```
 
 ## 3. 豆包工作
 
-1. 下载 [`lc-expert-skill-2-o.zip`](https://github.com/globalwinhs/hs-open-skills/raw/refs/heads/main/packages/lc-expert-skill-2-o.zip)。
+1. 下载 [`lc-expert-o.zip`](https://github.com/globalwinhs/hs-open-skills/raw/refs/heads/main/packages/lc-expert-o.zip)。
 2. 在豆包工作左侧进入“插件 · 技能 · 伙伴”。
 3. 切换到“技能”，点击“添加” → “上传技能”。
 4. 选择 ZIP，按页面提示完成导入。
@@ -110,7 +110,7 @@ cp -R skills/lc-expert-skill-2-o .codex/skills/
 
 ## 4. WorkBuddy
 
-1. 下载 [`lc-expert-skill-2-o.zip`](https://github.com/globalwinhs/hs-open-skills/raw/refs/heads/main/packages/lc-expert-skill-2-o.zip)。
+1. 下载 [`lc-expert-o.zip`](https://github.com/globalwinhs/hs-open-skills/raw/refs/heads/main/packages/lc-expert-o.zip)。
 2. 打开 WorkBuddy 的“技能”页面，点击“添加技能”。
 3. 选择“上传技能”，导入 ZIP。
 4. 在“已安装”中确认 Skill 已启用。

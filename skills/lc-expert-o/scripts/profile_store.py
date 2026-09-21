@@ -14,7 +14,7 @@ from pathlib import Path
 
 SKILL_NAME = Path(__file__).resolve().parents[1].name
 REQUIRED_SECTIONS = {
-    "lc-expert-skill-2-o": {"company", "banking", "commercial_policy", "shipping", "documents", "risk_policy", "delivery"},
+    "lc-expert-o": {"company", "banking", "commercial_policy", "shipping", "documents", "risk_policy", "delivery"},
     "hs-target-market-analyze-o": {"product", "ideal_customers", "market_preferences"},
     "hs-bulk-customer-develop-o": {"product", "ideal_customer", "campaign_defaults"},
     "hs-customer-background-servey-o": {"seller_product", "risk_policy", "market_focus"},
@@ -154,4 +154,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
